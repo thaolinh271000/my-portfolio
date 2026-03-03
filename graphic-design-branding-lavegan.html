@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="root.js"></script>
+    <link rel="stylesheet" href="root.css">
+
+    <style>
+        /* navigation -------------------------------------------------- */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            background-color: white;
+            height: 80px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: var(--mainColor2);
+        }
+
+        nav a::after {
+            background-color: var(--mainColor2);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* body general -------------------------------------------------- */
+        section {
+            width: 1380px;
+            margin: 0 auto;
+            gap: 40px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .right-part {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        /* banner -------------------------------------------------- */
+        .banner,
+        .box {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+
+        }
+
+        .box {
+            padding: 40px;
+            background-color: white;
+        }
+
+        .banner {
+            width: 100%;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .banner .pic {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .banner .text {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+
+            position: absolute;
+            z-index: 2;
+
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .banner .text h2 {
+            font-weight: var(--fontSemiBold);
+            color: white;
+            font-size: 40px;
+        }
+
+        .banner .text p {
+            color: white;
+        }
+
+        /* row 2 font -------------------------------------------------- */
+        .row-2 {
+            width: 100%;
+            display: flex;
+            gap: 40px;
+        }
+
+        .row-2 .font-group h3 {
+            font-family: Coplette-medium;
+            font-size: 32px;
+            color: var(--mainColor2);
+        }
+
+        .row-2 .font-group p {
+            font-family: Coplette-medium;
+            font-size: 24px;
+            color: var(--subColor2);
+        }
+
+        .row-2 .font-detail {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+        }
+
+        .row-2 .font-group {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .row-2 .number-symbol {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* row 2 color -------------------------------------------------- */
+        .row-2 .color-group {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .row-2 .color-group p {
+            color: #F0EBE1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: var(--fontBold);
+            height: 100%;
+        }
+
+        .row-2 .color-group p:nth-child(4) {
+            color: #F0EBE1;
+        }
+
+        .row-2 .color-group p:first-child {
+            background-color: #3F7B48;
+        }
+
+        .row-2 .color-group p:nth-child(2) {
+            background-color: #94B692;
+        }
+
+        .row-2 .color-group p:nth-child(3) {
+            background-color: #CD8C5E;
+        }
+
+        .row-2 .color-group p:nth-child(4) {
+            background-color: #F0EBE1;
+            color: #CD8C5E;
+        }
+
+        /* row 2 logo -------------------------------------------------- */
+        .row-2 .box-left img {
+            width: 400px;
+        }
+
+        .row-2 .box-left {
+            position: relative;
+            padding: 40px 80px 120px 0;
+            display: flex;
+            align-items: end;
+        }
+
+        .line-group .line {
+            background-color: var(--mainColor2);
+        }
+
+        .line-group.vertical {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            position: absolute;
+        }
+
+        .logo-info.info-1 {
+            left: 31px;
+            text-align: end;
+        }
+
+        .line-group.horizontal {
+            display: flex;
+        }
+
+        .logo-info.info-2 {
+            width: 73px;
+            flex-direction: column;
+            left: 195px;
+            top: 377px;
+        }
+
+        .logo-info.info-2 p {
+            white-space: nowrap;
+            text-align: center;
+        }
+
+        .logo-info.info-2 .line-group.horizontal .line:nth-child(2) {
+            align-self: flex-end;
+        }
+
+        .logo-info.info-3 {
+            flex-direction: column;
+            left: 309px;
+            top: 377px;
+        }
+
+        .logo-info.info-2 .line-group.horizontal .line:nth-child(2),
+        .logo-info.info-3 .line-group.horizontal .line:nth-child(2) {
+            align-self: flex-end;
+        }
+
+        /* row 3 logo -------------------------------------------------- */
+        .row-3 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            height: 454px;
+        }
+
+        .row-3 p {
+            width: 100%;
+            background-color: var(--subColor4);
+            font-weight: var(--fontSemiBold);
+            text-align: center;
+            padding: 5px 0 5px 0;
+            border-radius: 5px;
+        }
+
+        .row-3 .logo-group {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 40px;
+            height: 100%;
+        }
+
+        .row-3 .logo-group:nth-child(1) img {
+            width: 368px;
+        }
+        .row-3 .logo-group:nth-child(2) img {
+            width: 600px;
+        }
+        .row-3 .logo-group:nth-child(3) img {
+            width: 191px;
+        }
+
+        /* row 4 mockup -------------------------------------------------- */
+        .row-4 {
+            display: grid;
+            grid-template-columns: repeat(2, 670px);
+            grid-template-rows: repeat(2, 1fr);
+            height: 940px;
+            gap: 40px;
+        }
+
+        .row-4 .box, .row-5{
+            padding: 0;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        .row-4 img, .row-5 img {
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="center-flex">
+            <a href="index.html"><img src="pics/me.jpg" alt="" class="avatar"></a>
+            <h1 class="menu-button center-flex"><a href="about-me.html">ABOUT ME</a></h1>
+            <div class="swap-menu">
+                <h1 class="menu-button main-link"><a href="">MY WORK</a></h1>
+                <div class="sub-menu center-flex">
+                    <h1 class="menu-button"><a href="ux-ui-design.html">UX UI DESIGN</a></h1>
+                    <h1 class="menu-button"><a href="graphic-design.html">GRAPHIC DESIGN</a></h1>
+                    <h1 class="menu-button"><a href="photography.html">PHOTOGRAPHY</a></h1>
+                    <h1 class="menu-button"><a href="filmmaking.html">FILMMAKING</a></h1>
+                </div>
+            </div>
+            <h1 class="menu-button"><a href="contact.html">CONTACT</a></h1>
+        </nav>
+    </header>
+    <section>
+        <div class="banner">
+            <div class="text center-flex">
+                <h2>LA’VEGAN</h2>
+                <p>Vegan Sandwich Shop</p>
+            </div>
+            <img class="pic" src="pics/logo/lavegan_pic.svg" alt="">
+        </div>
+
+        <div class="row-2">
+            <div class="box box-left">
+                <div class="logo-info info-1">
+                    <p>Curved leaf shape</p>
+                    <div class="line-group vertical">
+                        <div class="line" style="width: 20px; height: 0.5px;"></div>
+                        <div class="line" style="width: 0.5px; height: 192px;"></div>
+                        <div class="line" style="width: 20px; height: 0.5px;"></div>
+                    </div>
+                </div>
+
+                <img src="pics/logo/lavegan_logo_primary.svg" alt="">
+
+                <div class="logo-info info-2">
+                    <div class="line-group horizontal">
+                        <div class="line" style="width: 0.5px; height: 20px;"></div>
+                        <div class="line" style="width: 73px; height: 0.5px;"></div>
+                        <div class="line" style="width: 0.5px; height: 20px;"></div>
+                    </div>
+                    <p>Vietnamese word “lá”<br>meaning “leaf”</p>
+                </div>
+                <div class="logo-info info-3">
+                    <div class="line-group horizontal">
+                        <div class="line" style="width: 0.5px; height: 20px;"></div>
+                        <div class="line" style="width: 286px; height: 0.5px;"></div>
+                        <div class="line" style="width: 0.5px; height: 20px;"></div>
+                    </div>
+                    <p>Business industry</p>
+                </div>
+            </div>
+            <div class="box box-right">
+                <div class="font-group">
+                    <h3>COPLETTE</h3>
+                    <div class="font-detail">
+                        <p>ABCDEFGHIJKLMNOPQRSTUVWSYZ</p>
+                        <p>abcdefghijklmnopqrstuvwsyz</p>
+                        <div class="number-symbol">
+                            <p>0123456789</p>
+                            <p>!@#$%^&*();”?/</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="color-group">
+                    <p>#3F7B48</p>
+                    <p>#94B692</p>
+                    <p>#CD8C5E</p>
+                    <p>#F0EBE1</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="box row-3">
+            <div class="logo-group">
+                <img src="pics/logo/lavegan_logo_primary.svg" alt="">
+                <p>Primary Logo</p>
+            </div>
+            <div class="logo-group">
+                <img src="pics/logo/lavegan_logo_secondary.svg" alt="">
+                <p>Secondary Logo</p>
+            </div>
+            <div class="logo-group">
+                <img src="pics/logo/lavegan_logo_submark.svg" alt="">
+                <p>Submark</p>
+            </div>
+        </div>
+
+        <div class="row-4">
+            <div class="box">
+                <img src="pics/mockup/lavegan/business-card.png" alt="">
+            </div>
+            <div class="box">
+                <img src="pics/mockup/lavegan/membership-card.png" alt="">
+            </div>
+            <div class="box">
+                <img src="pics/mockup/lavegan/voucher.png" alt="">
+            </div>
+            <div class="box">
+                <img src="pics/mockup/lavegan/voucher.png" alt="">
+            </div>
+        </div>
+        <div class="box row-5">
+            <img src="pics/mockup/lavegan/notebook.png" alt="">
+        </div>
+        <div class="box row-5">
+            <img src="pics/mockup/lavegan/social-media-post.png" alt="">
+        </div>
+
+    </section>
+
+    <button onclick="topFunction()" id="top-button" title="Go to top" class="center-flex">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512"
+            height="512" x="0" y="0" viewBox="0 0 367.676 367.676" style="enable-background:new 0 0 512 512"
+            xml:space="preserve">
+            <g>
+                <path
+                    d="M344.696 287.246a22.905 22.905 0 0 1-16.249-6.73l-144.61-144.609L39.229 280.516c-8.973 8.975-23.524 8.975-32.498 0-8.974-8.974-8.974-23.524 0-32.498L167.588 87.159a22.982 22.982 0 0 1 32.499 0l160.858 160.858c8.974 8.974 8.974 23.524 0 32.498a22.902 22.902 0 0 1-16.249 6.731z"
+                    opacity="1" data-original="#000000"></path>
+            </g>
+        </svg>
+    </button>
+
+</body>
+
+</html>

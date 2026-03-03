@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="root.js" defer></script>
+    <link rel="stylesheet" href="root.css">
+    <style>
+        /* navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            background-color: white;
+            height: 80px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: var(--mainColor2);
+        }
+
+        nav a::after {
+            background-color: var(--mainColor2);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* body general */
+        section {
+            width: 1380px;
+            margin: 0 auto;
+            gap: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+        }
+
+        /* album title */
+        .title {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .title h1 {
+            font-weight: var(--fontRegular);
+            font-size: var(--fontSizeH1);
+        }
+
+        .line {
+            width: 1px;
+            align-self: stretch;
+            background-color: var(--mainColor2);
+        }
+
+        .album {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        /* photo grid */
+        .photo-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .photo-grid a {
+            width: 322.5px;
+            height: 322.5px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .photo-grid a img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(.2, .8, .2, 1);
+        }
+
+        .photo-grid .special img {
+            object-position: top;
+        }
+
+        .photo-grid a img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="center-flex">
+            <a href="index.html"><img src="pics/me.jpg" alt="" class="avatar"></a>
+            <h1 class="menu-button center-flex"><a href="about-me.html">ABOUT ME</a></h1>
+            <div class="swap-menu">
+                <h1 class="menu-button main-link"><a href="">MY WORK</a></h1>
+                <div class="sub-menu center-flex">
+                    <h1 class="menu-button"><a href="ux-ui-design.html">UX UI DESIGN</a></h1>
+                    <h1 class="menu-button"><a href="graphic-design.html">GRAPHIC DESIGN</a></h1>
+                    <h1 class="menu-button"><a href="photography.html">PHOTOGRAPHY</a></h1>
+                    <h1 class="menu-button"><a href="filmmaking.html">FILMMAKING</a></h1>
+                </div>
+            </div>
+            <h1 class="menu-button"><a href="contact.html">CONTACT</a></h1>
+        </nav>
+    </header>
+    <section>
+        <div class="album">
+            <div class="title">
+                <h1>Photo Walking</h1>
+                <div class="line"></div>
+                <p>20 August 2025</p>
+            </div>
+            <div class="photo-grid">
+                <a href="album-photowalk.html?slide=0"><img src="pics/photowalk/thumbnail/_MG_1264.jpg" alt=""></a>
+                <a href="album-photowalk.html?slide=1"><img src="pics/photowalk/thumbnail/_MG_1276.jpg" alt=""></a>
+                <a href="album-photowalk.html?slide=2"><img src="pics/photowalk/thumbnail/_MG_1296.jpg" alt=""></a>
+                <a href="album-photowalk.html?slide=3"><img src="pics/photowalk/thumbnail/_MG_1406.jpg" alt=""></a>
+                <a href="album-photowalk.html?slide=4"><img src="pics/photowalk/thumbnail/_MG_1423.jpg" alt=""></a>
+                <a href="album-photowalk.html?slide=5"><img src="pics/photowalk/thumbnail/_MG_1427.jpg" alt=""></a>
+                <a href="album-photowalk.html?slide=6"><img src="pics/photowalk/thumbnail/_MG_1435.jpg" alt=""></a>
+                <a href="album-photowalk.html?slide=7"><img src="pics/photowalk/thumbnail/_MG_1440.jpg" alt=""></a>
+                <a href="album-photowalk.html?slide=8"><img src="pics/photowalk/thumbnail/_MG_1474.jpg" alt=""></a>
+                <a href="album-photowalk.html?slide=9"><img src="pics/photowalk/thumbnail/_MG_1484.jpg" alt=""></a>
+                <a href="album-photowalk.html?slide=10"><img src="pics/photowalk/thumbnail/_MG_1487.jpg" alt=""></a>
+                <a href="album-photowalk.html?slide=11" class="special"><img src="pics/photowalk/thumbnail/_MG_1503.jpg"
+                        alt=""></a>
+                <a href="album-photowalk.html?slide=12"><img src="pics/photowalk/thumbnail/_MG_1505.jpg" alt=""></a>
+            </div>
+        </div>
+        <div class="album">
+            <div class="title">
+                <h1>A Hometown Morning</h1>
+                <div class="line"></div>
+                <p>26 June 2025</p>
+            </div>
+            <div class="photo-grid">
+                <a href="album-hoian.html?slide=0"><img src="pics/hoian/thumbnail/_MG_0853.jpg" alt=""></a>
+                <a href="album-hoian.html?slide=1"><img src="pics/hoian/thumbnail/_MG_0928.jpg" alt=""></a>
+                <a href="album-hoian.html?slide=2"><img src="pics/hoian/thumbnail/_MG_0948.jpg" alt=""></a>
+                <a href="album-hoian.html?slide=3"><img src="pics/hoian/thumbnail/_MG_0950.jpg" alt=""></a>
+                <a href="album-hoian.html?slide=4"><img src="pics/hoian/thumbnail/_MG_0955.jpg" alt=""></a>
+                <a href="album-hoian.html?slide=5"><img src="pics/hoian/thumbnail/_MG_0959.jpg" alt=""></a>
+                <a href="album-hoian.html?slide=6"><img src="pics/hoian/thumbnail/_MG_0964.jpg" alt=""></a>
+                <a href="album-hoian.html?slide=7"><img src="pics/hoian/thumbnail/_MG_0970.jpg" alt=""></a>
+                <a href="album-hoian.html?slide=8"><img src="pics/hoian/thumbnail/_MG_0981.jpg" alt=""></a>
+                <a href="album-hoian.html?slide=9"><img src="pics/hoian/thumbnail/_MG_0983.jpg" alt=""></a>
+                <a href="album-hoian.html?slide=10"><img src="pics/hoian/thumbnail/_MG_0992.jpg" alt=""></a>
+                <a href="album-hoian.html?slide=11"><img src="pics/hoian/thumbnail/_MG_1005.jpg" alt=""></a>
+                <a href="album-hoian.html?slide=12"><img src="pics/hoian/thumbnail/_MG_1009.jpg" alt=""></a>
+                <a href="album-hoian.html?slide=13"><img src="pics/hoian/thumbnail/_MG_1018.jpg" alt=""></a>
+                <a href="album-hoian.html?slide=14"><img src="pics/hoian/thumbnail/_MG_1040.jpg" alt=""></a>
+                <a href="album-hoian.html?slide=15"><img src="pics/hoian/thumbnail/_MG_1054.jpg" alt=""></a>
+                <a href="album-hoian.html?slide=16"><img src="pics/hoian/thumbnail/_MG_1070.jpg" alt=""></a>
+                <a href="album-hoian.html?slide=17"><img src="pics/hoian/thumbnail/_MG_1073.jpg" alt=""></a>
+                <a href="album-hoian.html?slide=18"><img src="pics/hoian/thumbnail/_MG_1083.jpg" alt=""></a>
+                <a href="album-hoian.html?slide=19"><img src="pics/hoian/thumbnail/_MG_1088.jpg" alt=""></a>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="root.js" defer></script>
+    <link rel="stylesheet" href="root.css">
+
+    <style>
+        /* navigation -------------------------------------------------- */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            background-color: white;
+            height: 80px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: var(--mainColor2);
+        }
+
+        nav a::after {
+            background-color: var(--mainColor2);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* body general -------------------------------------------------- */
+        section {
+            width: 1380px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        /* title -------------------------------------------------- */
+        .title {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .title h1 {
+            font-weight: var(--fontRegular);
+            font-size: var(--fontSizeH1);
+        }
+
+        .line {
+            width: 1px;
+            align-self: stretch;
+            background-color: var(--mainColor2);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="center-flex">
+            <a href="index.html"><img src="pics/me.jpg" alt="" class="avatar"></a>
+            <h1 class="menu-button center-flex"><a href="about-me.html">ABOUT ME</a></h1>
+            <div class="swap-menu">
+                <h1 class="menu-button main-link"><a href="index.html">MY WORK</a></h1>
+                <div class="sub-menu center-flex">
+                    <h1 class="menu-button"><a href="ux-ui-design.html">UX UI DESIGN</a></h1>
+                    <h1 class="menu-button"><a href="graphic-design.html">GRAPHIC DESIGN</a></h1>
+                    <h1 class="menu-button"><a href="photography.html">PHOTOGRAPHY</a></h1>
+                    <h1 class="menu-button"><a href="filmmaking.html">FILMMAKING</a></h1>
+                </div>
+            </div>
+            <h1 class="menu-button"><a href="contact.html">CONTACT</a></h1>
+        </nav>
+    </header>
+    <section>
+        <div class="heading">
+            <div class="title">
+                <h1>Bat Dong San Di Tru</h1>
+                <div class="line"></div>
+                <div class="tab-nav">
+                    <button class="active" onclick="openDevice('Desktop')">Desktop</button>
+                    <button onclick="openDevice('Mobile')">Mobile</button>
+                </div>
+            </div>
+            <div class="right-part">
+                <p>8 pages</p>
+                <!-- <a href="\"><button
+                        class="liveweb center-flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            width="512" height="512" x="0" y="0" viewBox="0 0 32 32"
+                            style="enable-background:new 0 0 512 512" xml:space="preserve" class="">
+                            <g>
+                                <path
+                                    d="M11.57 23a1 1 0 0 1-.68-.27 9.28 9.28 0 0 1 0-13.46 1 1 0 0 1 1.36 1.46 7.3 7.3 0 0 0 0 10.54 1 1 0 0 1-.68 1.73zm-4 2.68a1 1 0 0 0 0-1.41 11.43 11.43 0 0 1 0-16.54 1 1 0 1 0-1.41-1.46 13.44 13.44 0 0 0 0 19.46 1 1 0 0 0 1.42-.05zm13.53-2.95a9.28 9.28 0 0 0 0-13.46 1 1 0 1 0-1.37 1.46 7.27 7.27 0 0 1 0 10.54 1 1 0 0 0-.05 1.41 1 1 0 0 0 .74.32 1 1 0 0 0 .68-.27zm4.72 3a13.41 13.41 0 0 0 0-19.46 1 1 0 0 0-1.36 1.46 11.43 11.43 0 0 1 0 16.54 1 1 0 0 0-.05 1.41 1 1 0 0 0 .73.32 1 1 0 0 0 .68-.27zM18 16a2 2 0 1 0-2 2 2 2 0 0 0 2-2z"
+                                    data-name="Layer 11" fill="#ffffff" opacity="1" data-original="#000000" class="">
+                                </path>
+                            </g>
+                        </svg>
+                        <p>Live website</p>
+                    </button>
+                </a> -->
+            </div>
+        </div>
+
+
+        <div class="tab-content">
+            <div id="Desktop" class="device desktop">
+                <img src="pics/webpic/batdongsanditru/Desktop_Homepage.png" alt="">
+                <img src="pics/webpic/batdongsanditru/Desktop_AboutUs.png" alt="">
+                <img src="pics/webpic/batdongsanditru/Desktop_Services.png" alt="">
+                <img src="pics/webpic/batdongsanditru/Desktop_ServicesDetail.png" alt="">
+                <img src="pics/webpic/batdongsanditru/Desktop_News.png" alt="">
+                <img src="pics/webpic/batdongsanditru/Desktop_NewsDetail.png" alt="">
+                <img src="pics/webpic/batdongsanditru/Desktop_Catalogue.png" alt="">
+                <img src="pics/webpic/batdongsanditru/Desktop_ContactUs.png" alt="">
+            </div>
+            <div id="Mobile" class="device mobile" style="display:none">
+                <img src="pics/webpic/batdongsanditru/Mobile_Homepage.png" alt="">
+                <img src="pics/webpic/batdongsanditru/Mobile_AboutUs.png" alt="">
+                <img src="pics/webpic/batdongsanditru/Mobile_Services.png" alt="">
+                <img src="pics/webpic/batdongsanditru/Mobile_ServicesDetail.png" alt="">
+                <img src="pics/webpic/batdongsanditru/Mobile_News.png" alt="">
+                <img src="pics/webpic/batdongsanditru/Mobile_NewsDetail.png" alt="">
+                <img src="pics/webpic/batdongsanditru/Mobile_Catalogue.png" alt="">
+                <img src="pics/webpic/batdongsanditru/Mobile_ContactUs.png" alt="">
+            </div>
+        </div>
+
+
+
+    </section>
+
+    <button onclick="topFunction()" id="top-button" title="Go to top" class="center-flex">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512"
+            height="512" x="0" y="0" viewBox="0 0 367.676 367.676" style="enable-background:new 0 0 512 512"
+            xml:space="preserve">
+            <g>
+                <path
+                    d="M344.696 287.246a22.905 22.905 0 0 1-16.249-6.73l-144.61-144.609L39.229 280.516c-8.973 8.975-23.524 8.975-32.498 0-8.974-8.974-8.974-23.524 0-32.498L167.588 87.159a22.982 22.982 0 0 1 32.499 0l160.858 160.858c8.974 8.974 8.974 23.524 0 32.498a22.902 22.902 0 0 1-16.249 6.731z"
+                    opacity="1" data-original="#000000"></path>
+            </g>
+        </svg>
+    </button>
+
+</body>
+
+</html>

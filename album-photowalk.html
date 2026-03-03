@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="root.js" defer></script>
+    <link rel="stylesheet" href="root.css">
+
+    <style>
+        /* navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            background-color: white;
+            height: 80px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: var(--mainColor2);
+        }
+
+        nav a::after {
+            background-color: var(--mainColor2);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* body general */
+        section {
+            width: 1380px;
+            margin: 0 auto;
+            gap: 40px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .photo-area {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        /* album title */
+        .title {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .title h1 {
+            font-weight: var(--fontRegular);
+            font-size: var(--fontSizeH1);
+        }
+
+        .line {
+            width: 1px;
+            align-self: stretch;
+            background-color: var(--mainColor2);
+        }
+
+        /* swiper */
+
+        .mySwiperBig {
+            width: 100%;
+            height: 776px;
+        }
+
+        .mySwiperBig img {
+            height: 100%;
+        }
+
+        .mySwiperSmall {
+            width: 100%;
+            height: 87.5px;
+        }
+
+        .mySwiperSmall .swiper-slide {
+            width: 87.5px;
+            height: 100%;
+            overflow: hidden;
+            opacity: 0.4;
+        }
+
+        .mySwiperSmall .swiper-slide-thumb-active {
+            opacity: 1;
+        }
+
+        .mySwiperSmall img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .special img {
+            object-position: top;
+        }
+
+        .arrow {
+            width: 60px;
+            height: 60px;
+            background-color: white;
+            border-radius: 100px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            color: var(--mainColor2);
+            font-size: 32px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="center-flex">
+            <a href="index.html"><img src="pics/me.jpg" alt="" class="avatar"></a>
+            <h1 class="menu-button center-flex"><a href="about-me.html">ABOUT ME</a></h1>
+            <div class="swap-menu">
+                <h1 class="menu-button main-link"><a href="">MY WORK</a></h1>
+                <div class="sub-menu center-flex">
+                    <h1 class="menu-button"><a href="ux-ui-design.html">UX UI DESIGN</a></h1>
+                    <h1 class="menu-button"><a href="graphic-design.html">GRAPHIC DESIGN</a></h1>
+                    <h1 class="menu-button"><a href="photography.html">PHOTOGRAPHY</a></h1>
+                    <h1 class="menu-button"><a href="index.html">FILMMAKING</a></h1>
+                </div>
+            </div>
+            <h1 class="menu-button"><a href="contact.html">CONTACT</a></h1>
+        </nav>
+    </header>
+    <section>
+        <div class="title">
+            <h1>Photo Walking</h1>
+            <div class="line"></div>
+            <p>20 August 2025</p>
+        </div>
+        <div class="photo-area">
+            <div class="swiper mySwiperBig">
+                <div class="swiper-wrapper">
+                    <div class="center-flex swiper-slide"><img src="pics/photowalk/_MG_1264.jpg" alt=""></div>
+                    <div class="center-flex swiper-slide"><img src="pics/photowalk/_MG_1276.jpg" alt=""></div>
+                    <div class="center-flex swiper-slide"><img src="pics/photowalk/_MG_1296.jpg" alt=""></div>
+                    <div class="center-flex swiper-slide"><img src="pics/photowalk/_MG_1406.jpg" alt=""></div>
+                    <div class="center-flex swiper-slide"><img src="pics/photowalk/_MG_1423.jpg" alt=""></div>
+                    <div class="center-flex swiper-slide"><img src="pics/photowalk/_MG_1427.jpg" alt=""></div>
+                    <div class="center-flex swiper-slide"><img src="pics/photowalk/_MG_1435.jpg" alt=""></div>
+                    <div class="center-flex swiper-slide"><img src="pics/photowalk/_MG_1440.jpg" alt=""></div>
+                    <div class="center-flex swiper-slide"><img src="pics/photowalk/_MG_1474.jpg" alt=""></div>
+                    <div class="center-flex swiper-slide"><img src="pics/photowalk/_MG_1484.jpg" alt=""></div>
+                    <div class="center-flex swiper-slide"><img src="pics/photowalk/_MG_1487.jpg" alt=""></div>
+                    <div class="center-flex swiper-slide"><img src="pics/photowalk/_MG_1503.jpg" alt=""></div>
+                    <div class="center-flex swiper-slide"><img src="pics/photowalk/_MG_1505.jpg" alt=""></div>
+                </div>
+                <div class="arrow swiper-button-next"></div>
+                <div class="arrow swiper-button-prev"></div>
+            </div>
+            <div thumbsSlider="" class="swiper mySwiperSmall">
+                <div class="swiper-wrapper">
+                    <div class="center-flex swiper-slide"><img src="pics/photowalk/thumbnail/_MG_1264.jpg" alt=""></div>
+                    <div class="center-flex swiper-slide"><img src="pics/photowalk/thumbnail/_MG_1276.jpg" alt=""></div>
+                    <div class="center-flex swiper-slide"><img src="pics/photowalk/thumbnail/_MG_1296.jpg" alt=""></div>
+                    <div class="center-flex swiper-slide"><img src="pics/photowalk/thumbnail/_MG_1406.jpg" alt=""></div>
+                    <div class="center-flex swiper-slide"><img src="pics/photowalk/thumbnail/_MG_1423.jpg" alt=""></div>
+                    <div class="center-flex swiper-slide"><img src="pics/photowalk/thumbnail/_MG_1427.jpg" alt=""></div>
+                    <div class="center-flex swiper-slide"><img src="pics/photowalk/thumbnail/_MG_1435.jpg" alt=""></div>
+                    <div class="center-flex swiper-slide"><img src="pics/photowalk/thumbnail/_MG_1440.jpg" alt=""></div>
+                    <div class="center-flex swiper-slide"><img src="pics/photowalk/thumbnail/_MG_1474.jpg" alt=""></div>
+                    <div class="center-flex swiper-slide"><img src="pics/photowalk/thumbnail/_MG_1484.jpg" alt=""></div>
+                    <div class="center-flex swiper-slide"><img src="pics/photowalk/thumbnail/_MG_1487.jpg" alt=""></div>
+                    <div class="center-flex swiper-slide special"><img src="pics/photowalk/thumbnail/_MG_1503.jpg"
+                            alt=""></div>
+                    <div class="center-flex swiper-slide"><img src="pics/photowalk/thumbnail/_MG_1505.jpg" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const startSlide = parseInt(params.get("slide")) || 0;
+
+        var swiperThumb = new Swiper(".mySwiperSmall", {
+            loop: true,
+            spaceBetween: 10,
+            slidesPerView: 13,
+            freeMode: true,
+            watchSlidesProgress: true,
+        });
+
+        var swiperBig = new Swiper(".mySwiperBig", {
+            loop: true,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            thumbs: {
+                swiper: swiperThumb,
+            },
+            
+            initialSlide: startSlide,
+
+            keyboard: {
+                enabled: true,
+                onlyInViewport: true,
+            },
+        });
+    </script>
+
+</body>
+
+</html>
