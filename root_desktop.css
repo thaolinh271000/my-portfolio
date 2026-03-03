@@ -1,0 +1,30 @@
+/* desktop: 993px -> 1420px -------------------------------------------------- */
+/* header -------------------------------------------------- */
+
+nav {
+    gap: 40px;
+}
+
+nav a, nav button {
+    font-size: 16px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* my work navigation */
+
+.sub-menu {
+    gap: 40px;
+}
+
+/* section -------------------------------------------------- */
+
+section {
+    width: 100vw;
+}
+
+/* box -------------------------------------------------- */
+
+.box {
+    gap: 32px;
+}
