@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="root.js" defer></script>
+    <link rel="stylesheet" href="root.css">
+    <style>
+        /* navigation */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            background-color: white;
+            height: 80px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: var(--mainColor2);
+        }
+
+        nav a::after {
+            background-color: var(--mainColor2);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* body general */
+        section {
+            width: 1380px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+        }
+
+        /* title */
+        .title {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .title h1 {
+            font-weight: var(--fontRegular);
+            font-size: var(--fontSizeH1);
+        }
+
+        .line {
+            width: 1px;
+            align-self: stretch;
+            background-color: var(--mainColor2);
+        }
+
+        /* brand info */
+
+        section .year {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .text .sub-info {
+            display: flex;
+            gap: 10px;
+        }
+
+        .brand .text {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .brand {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            cursor: pointer;
+        }
+
+        .brand h2 {
+            font-weight: var(--fontSemiBold);
+            font-size: var(--fontSize20);
+            color: var(--mainColor2);
+        }
+
+        .brand .thumbnail {
+            width: 100%;
+            height: 293px;
+            border-radius: 5px;
+
+            position: relative;
+            overflow: hidden;
+            transition: background-size 0.6s cubic-bezier(.2, .8, .2, 1);
+        }
+
+        .brand .logo {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            position: absolute;
+            transition: opacity 0.6s cubic-bezier(.2, .8, .2, 1);
+            z-index: 2;
+        }
+
+        .brand .pic {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(.2, .8, .2, 1);
+            z-index: 1;
+        }
+
+        .brand:hover .pic {
+            transform: scale(1.1);
+        }
+
+        .brand:hover .logo {
+            opacity: 0;
+        }
+
+        .brand-group {
+            display: grid;
+            grid-template-columns: repeat(3, 440px);
+            gap: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="center-flex">
+            <a href="index.html"><img src="pics/me.jpg" alt="" class="avatar"></a>
+            <h1 class="menu-button center-flex"><a href="about-me.html">ABOUT ME</a></h1>
+            <div class="swap-menu">
+                <h1 class="menu-button main-link"><a href="index.html">MY WORK</a></h1>
+                <div class="sub-menu center-flex">
+                    <h1 class="menu-button"><a href="ux-ui-design.html">UX UI DESIGN</a></h1>
+                    <h1 class="menu-button"><a href="graphic-design.html">GRAPHIC DESIGN</a></h1>
+                    <h1 class="menu-button"><a href="photography.html">PHOTOGRAPHY</a></h1>
+                    <h1 class="menu-button"><a href="filmmaking.html">FILMMAKING</a></h1>
+                </div>
+            </div>
+            <h1 class="menu-button"><a href="contact.html">CONTACT</a></h1>
+        </nav>
+    </header>
+    <section>
+        <div class="year">
+            <div class="title">
+                <h1>2025 - 2026</h1>
+                <div class="line"></div>
+                <p>UX UI Design</p>
+            </div>
+            <div class="brand-group">
+                <a href="ux-ui-design-diennuochungthinh.html" class="brand">
+                    <div class="thumbnail">
+                        <div class="logo">
+                            <img src="pics/logo/hungthinh_logo.svg" alt="">
+                        </div>
+                        <img class="pic" src="pics/logo/hungthinh_pic.svg" alt="">
+                    </div>
+                    <div class="text">
+                        <h2>Electrical & Plumbing Services</h2>
+                        <div class="sub-info">
+                            <p>Business website</p>
+                            <div class="line"></div>
+                            <p>Desktop & Mobile</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="ux-ui-design-a2z.html" class="brand">
+                    <div class="thumbnail">
+                        <div class="logo">
+                            <img src="pics/logo/a2z_logo.svg" alt="">
+                        </div>
+                        <img class="pic" src="pics/logo/a2z_pic.svg" alt="">
+                    </div>
+                    <div class="text">
+                        <h2>Civil Engineering & CAD Drafting Firm</h2>
+                        <div class="sub-info">
+                            <p>Business website</p>
+                            <div class="line"></div>
+                            <p>Mobile</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="ux-ui-design-batdongsanditru.html" class="brand">
+                    <div class="thumbnail">
+                        <div class="logo">
+                            <img src="pics/logo/bdsditru_logo.svg" alt="">
+                        </div>
+                        <img class="pic" src="pics/logo/bdsditru_pic.svg" alt="">
+                    </div>
+                    <div class="text">
+                        <h2>Immigration & Real Estate Consultancy</h2>
+                        <div class="sub-info">
+                            <p>Business website</p>
+                            <div class="line"></div>
+                            <p>Desktop & Mobile</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="ux-ui-design-valorhagiang.html" class="brand">
+                    <div class="thumbnail">
+                        <div class="logo">
+                            <img src="pics/logo/valorhagiang_logo.svg" width="200" alt="">
+                        </div>
+                        <img class="pic" src="pics/logo/valorhagiang_pic.svg" alt="">
+                    </div>
+                    <div class="text">
+                        <h2>Motorcycle Tour Agency</h2>
+                        <div class="sub-info">
+                            <p>Business website</p>
+                            <div class="line"></div>
+                            <p>Mobile</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="ux-ui-design-namtien.html" class="brand">
+                    <div class="thumbnail">
+                        <div class="logo">
+                            <img src="pics/logo/namtien_logo.svg" alt="">
+                        </div>
+                        <img class="pic" src="pics/logo/namtien_pic.svg" alt="">
+                    </div>
+                    <div class="text">
+                        <h2>Construction Net Supplier</h2>
+                        <div class="sub-info">
+                            <p>Business website</p>
+                            <div class="line"></div>
+                            <p>Desktop</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="ux-ui-design-xenangplus.html" class="brand">
+                    <div class="thumbnail">
+                        <div class="logo">
+                            <img src="pics/logo/xenangplus_logo.svg" alt="">
+                        </div>
+                        <img class="pic" src="pics/logo/xenangplus_pic.svg" alt="">
+                    </div>
+                    <div class="text">
+                        <h2>Material Handling Equipment Supplier</h2>
+                        <div class="sub-info">
+                            <p>Business website</p>
+                            <div class="line"></div>
+                            <p>Desktop & Mobile</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="ux-ui-design-eliskey.html" class="brand">
+                    <div class="thumbnail">
+                        <div class="logo">
+                            <img src="pics/logo/eliskey_logo.svg" alt="">
+                        </div>
+                        <img class="pic" src="pics/logo/eliskey_pic.svg" alt="">
+                    </div>
+                    <div class="text">
+                        <h2>Premium Subscription Service</h2>
+                        <div class="sub-info">
+                            <p>Business website</p>
+                            <div class="line"></div>
+                            <p>Desktop</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="ux-ui-design-geoomnia.html" class="brand">
+                    <div class="thumbnail">
+                        <div class="logo">
+                            <img src="pics/logo/geoomnia_logo.svg" alt="">
+                        </div>
+                        <img class="pic" src="pics/logo/geoomnia_pic.svg" alt="">
+                    </div>
+                    <div class="text">
+                        <h2>Management Platform for F&B Businesses</h2>
+                        <div class="sub-info">
+                            <p>Business website</p>
+                            <div class="line"></div>
+                            <p>Mobile</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="year">
+            <div class="title">
+                <h1>2023 - 2024</h1>
+                <div class="line"></div>
+                <p>UX UI Design</p>
+            </div>
+            <div class="brand-group">
+                <a href="ux-ui-design-tropique.html" class="brand">
+                    <div class="thumbnail">
+                        <div class="logo">
+                            <img src="pics/logo/tropique_logo.svg" alt="">
+                        </div>
+                        <img class="pic" src="pics/logo/tropique_pic.svg" alt="">
+                    </div>
+                    <div class="text">
+                        <h2>Hospitality & Accommodation Services</h2>
+                        <div class="sub-info">
+                            <p>Business website</p>
+                            <div class="line"></div>
+                            <p>Desktop & Tablet & Mobile</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="ux-ui-design-furin.html" class="brand">
+                    <div class="thumbnail">
+                        <div class="logo">
+                            <img src="pics/logo/furin_logo.svg" alt="">
+                        </div>
+                        <img class="pic" src="pics/logo/furin_pic.svg" alt="">
+                    </div>
+                    <div class="text">
+                        <h2>Laundry and Cafe Shop</h2>
+                        <div class="sub-info">
+                            <p>Business website</p>
+                            <div class="line"></div>
+                            <p>Desktop & Tablet & Mobile</p>
+                        </div>
+                    </div>
+                </a>
+                <a href="ux-ui-design-oceanplus.html" class="brand">
+                    <div class="thumbnail">
+                        <div class="logo">
+                            <img src="pics/logo/oceanplus_logo.svg" alt="">
+                        </div>
+                        <img class="pic" src="pics/logo/oceanplus_pic.svg" alt="">
+                    </div>
+                    <div class="text">
+                        <h2>Sun Protection Product Distributor</h2>
+                        <div class="sub-info">
+                            <p>Business website</p>
+                            <div class="line"></div>
+                            <p>Desktop & Tablet & Mobile</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <button onclick="topFunction()" id="top-button" title="Go to top" class="center-flex">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512"
+            height="512" x="0" y="0" viewBox="0 0 367.676 367.676" style="enable-background:new 0 0 512 512"
+            xml:space="preserve">
+            <g>
+                <path
+                    d="M344.696 287.246a22.905 22.905 0 0 1-16.249-6.73l-144.61-144.609L39.229 280.516c-8.973 8.975-23.524 8.975-32.498 0-8.974-8.974-8.974-23.524 0-32.498L167.588 87.159a22.982 22.982 0 0 1 32.499 0l160.858 160.858c8.974 8.974 8.974 23.524 0 32.498a22.902 22.902 0 0 1-16.249 6.731z"
+                    opacity="1" data-original="#000000"></path>
+            </g>
+        </svg>
+    </button>
+</body>
+
+</html>
