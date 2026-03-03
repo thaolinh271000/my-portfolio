@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: AgencyFB-regular;
+    src: url(fonts/AGENCYR.TTF);
+}
+
+@font-face {
+    font-family: AgencyFB-bold;
+    src: url(fonts/AGENCYR.TTF);
+}
+
+@font-face {
+    font-family: Coplette-medium;
+    src: url(fonts/Coplette.otf);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: var(--font1);
+}
+
+html {
+    font-size: 100%;
+}
+
+:root {
+    --mainColor1: #EBC296;
+    --mainColor2: #333;
+    --subColor1: #EEE;
+    --subColor2: #aaa;
+    --subColor3: #888;
+    --subColor4: #FDECEF;
+    --subColor5: #ddd;
+    --subColor6: #d9a876;
+
+    --font1: 'Montserrat', sans-serif;
+    --fontSizeBody: 16px;
+    --fontSizeH1: 32px;
+    --fontSize20: 20px;
+    --fontSize3: 24px;
+    --fontSize4: 36px;
+
+    --fontRegular: 400;
+    --fontBold: 700;
+    --fontSemiBold: 600;
+    --fontMedium: 500;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+p {
+    color: var(--mainColor2);
+}
+
+p {
+    font-size: var(--fontSizeBody);
+    font-weight: var(--fontRegular);
+}
+
+img {
+    -webkit-user-drag: none;
+    user-select: none;
+}
+
+.center-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--subColor1);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+button {
+    border: none;
+}
+
+/* header -------------------------------------------------- */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+}
+
+/* my work navigation */
+
+nav h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    font-size: var(--fontSize20);
+    font-weight: 700;
+    text-decoration: none;
+
+    position: relative;
+}
+
+nav h1 a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+}
+
+.sub-menu a {
+    color: var(--mainColor1);
+}
+
+.swap-menu {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+}
+
+.sub-menu {
+    display: none;
+}
+
+.swap-menu:hover .main-link {
+    display: none;
+    height: 100%;
+}
+
+.swap-menu:hover .sub-menu {
+    display: flex;
+    gap: 80px;
+}
+
+.swap-menu a::after {
+    background-color: var(--mainColor1);
+}
+
+.menu-button {
+    height: 100%;
+    width: fit-content;
+    align-content: center;
+}
+
+/* avatar */
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    object-fit: cover;
+    transform: scaleX(-1);
+}
+
+/* webpic title -------------------------------------------------- */
+.heading .title {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.heading .title h1 {
+    font-weight: var(--fontRegular);
+    font-size: var(--fontSizeH1);
+}
+
+.line {
+    width: 1px;
+    align-self: stretch;
+    background-color: var(--mainColor2);
+}
+
+/* webpic tab -------------------------------------------------- */
+.tab-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.tab-nav button {
+    font-size: var(--fontSize20);
+}
+
+.tab-nav button:not(.active) {
+    cursor: pointer;
+}
+
+.tab-nav button:hover {
+    font-weight: var(--fontBold);
+}
+
+.tab-nav .active {
+    font-weight: var(--fontBold);
+    color: var(--mainColor1);
+}
+
+/* web pic -------------------------------------------------- */
+.tab-content .device img {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.tab-content .device {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    overflow: auto;
+}
+
+.tab-content .device.desktop img {
+    width: 400px;
+}
+
+.tab-content .device.tablet img {
+    width: 300px;
+}
+
+.tab-content .device.mobile img {
+    width: 180px;
+}
+
+/* button live web -------------------------------------------------- */
+.heading .liveweb {
+    background-color: var(--mainColor1);
+    gap: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.1s cubic-bezier(.2, .8, .2, 1);
+}
+
+.heading .liveweb svg {
+    width: 24px;
+    height: 24px;
+}
+
+.heading .liveweb p {
+    color: white;
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heading .liveweb:hover {
+    background-color: var(--subColor6);
+}
+
+.heading .right-part {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+/* scroll to top -------------------------------------------------- */
+#top-button {
+    width: 60px;
+    height: 60px;
+    display: none;
+    position: fixed;
+    bottom: 60px;
+    right: 60px;
+    z-index: 99;
+    font-size: 18px;
+    outline: none;
+    background-color: var(--mainColor1);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 100px;
+}
+
+#top-button:hover {
+    background-color: var(--subColor6);
+}
+
+#top-button svg {
+    width: 24px;
+    height: 24px;
+    fill: white;
+}
