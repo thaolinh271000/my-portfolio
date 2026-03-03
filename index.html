@@ -103,7 +103,12 @@
             height: 120px;
         }
 
-        nav a {
+        .sub-menu {
+            background-color: transparent;
+        }
+
+        nav a,
+        nav button {
             color: white;
         }
 
@@ -125,32 +130,40 @@
             fill: var(--mainColor2);
         }
 
-        /* desktop -------------------------------------------------- */
+        /* desktop: 993px -> 1200px -------------------------------------------------- */
         @media screen and (max-width: 1200px) {
             .name {
                 font-size: 80px;
             }
+
+            section {
+                width: 200px;
+            }
         }
 
-        /* tablet -------------------------------------------------- */
+        /* tablet: 769px -> 992px  -------------------------------------------------- */
         @media screen and (max-width: 992px) {
             .name {
                 font-size: 60px;
             }
+            .sub-menu {
+                padding-top: 20px;
+            }
         }
 
-        /* mobile -------------------------------------------------- */
+        /* mobile: 360px -> 768px -------------------------------------------------- */
         @media screen and (max-width: 768px) {
             .name {
                 font-size: 40px;
             }
         }
-        
     </style>
 
-    <link rel="stylesheet" href="root_mobile.css" media="screen and (max-width: 768px)">
-    <link rel="stylesheet" href="root_tablet.css" media="screen and (max-width: 992px)">
     <link rel="stylesheet" href="root_desktop.css" media="screen and (max-width: 1200px)">
+    <link rel="stylesheet" href="root_tablet.css" media="screen and (max-width: 992px)">
+    <link rel="stylesheet" href="root_mobile.css" media="screen and (max-width: 768px)">
+
+
 </head>
 
 <body class="center-flex">
@@ -159,7 +172,7 @@
             <nav>
                 <h1 class="menu-button"><a href="about-me.html">ABOUT ME</a></h1>
                 <div class="swap-menu">
-                    <h1 class="menu-button main-link"><a href="">MY WORK</a></h1>
+                    <h1 class="menu-button main-link"><button>MY WORK</button></h1>
                     <div class="sub-menu">
                         <h1 class="menu-button"><a href="ux-ui-design.html">UX UI DESIGN</a></h1>
                         <h1 class="menu-button"><a href="graphic-design.html">GRAPHIC DESIGN</a></h1>
