@@ -1,17 +1,32 @@
+/* mobile: 360px -> 768px -------------------------------------------------- */
+
 /* header -------------------------------------------------- */
 
 nav {
-    gap: 40px;
+    gap: 0;
 }
 
-nav a {
+nav a,
+nav button {
     font-size: 16px;
 }
 
-/* my work navigation */
+/* section -------------------------------------------------- */
 
-nav h1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body {
+    gap: 20px;
+}
+
+/* box -------------------------------------------------- */
+
+.box {
+    gap: 24px;
+    padding: 28px;
+}
+
+/* scroll to top -------------------------------------------------- */
+#top-button {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
 }
