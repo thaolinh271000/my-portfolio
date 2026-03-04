@@ -1,17 +1,56 @@
+/* tablet: 769px -> 992px  -------------------------------------------------- */
 /* header -------------------------------------------------- */
 
 nav {
-    gap: 80px;
+    gap: 40px;
 }
 
-nav a {
+nav a,
+nav button {
     font-size: 16px;
+    text-align: center;
+    white-space: nowrap;
+    padding: 10px;
 }
 
 /* my work navigation */
 
-nav h1 {
+.swap-menu:hover .main-link {
     display: flex;
-    justify-content: center;
+    height: 100%;
+}
+
+.sub-menu {
+    gap: 20px;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.swap-menu:hover .sub-menu {
+    display: flex;
+    flex-direction: column;
     align-items: center;
+
+    position: absolute;
+    top: 80px;
+}
+
+.swap-menu {
+    flex-direction: column;
+    position: relative;
+}
+
+
+/* box -------------------------------------------------- */
+
+.box {
+    gap: 28px;
+}
+
+/* scroll to top -------------------------------------------------- */
+#top-button {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
 }
