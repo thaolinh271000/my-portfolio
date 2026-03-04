@@ -61,13 +61,13 @@
 
         /* tab logo -------------------------------------------------- */
 
-        .tab-content .tab-logo {
+        .tab-logo {
             display: grid;
             grid-template-columns: repeat(4, 322.5px);
             gap: 30px;
         }
 
-        .tab-content .tab-logo .logo-container {
+        .tab-logo .logo-container {
             background-color: white;
             width: 100%;
             aspect-ratio: 3 / 2;
@@ -124,7 +124,7 @@
 
         .tab-branding .brand .thumbnail {
             width: 100%;
-            height: 293px;
+            aspect-ratio: 3 / 2;
             background-position: center;
             background-repeat: no-repeat;
             border-radius: 5px;
@@ -196,7 +196,19 @@
         }
 
         .pic-container.pic-4 {
-            width: 437px;
+            width: 549px;
+        }
+
+        .pic-1,
+        .pic-2,
+        .pic-3,
+        .pic-5,
+        .pic-6 {
+            width: 1380px;
+        }
+
+        .pic-container img {
+            height: 100%;
         }
 
         .pic-container-group {
@@ -207,8 +219,10 @@
         .pic-manipulation {
             position: absolute;
             width: auto;
-            height: auto;
             overflow: hidden;
+
+            height: 100%;
+            inset: 0;
         }
 
         .pic-manipulation img {
@@ -230,7 +244,147 @@
             align-items: center;
             justify-content: center;
         }
+
+        /* desktop: 993px -> 1420px -------------------------------------------------- */
+        @media screen and (max-width: 1420px) {
+            section {
+                padding: 0 40px;
+            }
+
+            .tab-logo {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .pic-container {
+                height: 558px;
+            }
+
+            .pic-container.pic-4 {
+                width: 394px;
+            }
+
+            .pic-container.pic-7 {
+                width: 314px;
+            }
+
+            .pic-1,
+            .pic-2,
+            .pic-3,
+            .pic-5,
+            .pic-6 {
+                width: 992px;
+            }
+        }
+
+        /* tablet: 769px -> 992px  -------------------------------------------------- */
+        @media screen and (max-width: 992px) {
+
+            .tab-logo,
+            .tab-branding {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .pic-container {
+                height: 432px;
+            }
+
+            .pic-container.pic-4 {
+                width: 600px;
+                height: 849px;
+            }
+
+            .pic-container.pic-7 {
+                width: 500px;
+                height: 889px;
+            }
+
+            .pic-1,
+            .pic-2,
+            .pic-3,
+            .pic-5,
+            .pic-6 {
+                width: 768px;
+            }
+        }
+
+        /* mobile: 360px -> 768px -------------------------------------------------- */
+        @media screen and (max-width: 768px) {
+            .videos-group {
+                display: flex;
+                flex-direction: column;
+            }
+
+            section {
+                padding: 0 20px;
+            }
+
+            section .year {
+                gap: 32px;
+            }
+
+            .tab-nav {
+                gap: 10px;
+            }
+
+            .tab-nav button {
+                font-size: 18px;
+            }
+
+            .heading .title {
+                gap: 10px;
+            }
+
+            .heading .title h1 {
+                font-size: 20px;
+            }
+
+            .tab-content .tab-logo,
+            .tab-branding {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .tab-manipulation {
+                gap: 40px;
+            }
+
+            .slider-bar {
+                width: 40px;
+                height: 40px;
+            }
+
+            .slider-bar svg {
+                width: 28px;
+            }
+
+            .pic-container {
+                height: 202px;
+            }
+
+            .pic-container.pic-4 {
+                width: 300px;
+                height: 424px;
+            }
+
+            .pic-container.pic-7 {
+                width: 240px;
+                height: 427px;
+            }
+
+            .pic-1,
+            .pic-2,
+            .pic-3,
+            .pic-5,
+            .pic-6 {
+                width: 360px;
+            }
+        }
     </style>
+
+    <link rel="stylesheet" href="root_desktop.css" media="screen and (max-width: 1420px)">
+    <link rel="stylesheet" href="root_tablet.css" media="screen and (max-width: 992px)">
+    <link rel="stylesheet" href="root_mobile.css" media="screen and (max-width: 768px)">
+
 </head>
 
 <body>
@@ -239,7 +393,7 @@
             <a href="index.html"><img src="pics/me.jpg" alt="" class="avatar"></a>
             <h1 class="menu-button center-flex"><a href="about-me.html">ABOUT ME</a></h1>
             <div class="swap-menu">
-                <h1 class="menu-button main-link"><a href="index.html">MY WORK</a></h1>
+                <h1 class="menu-button main-link"><button>MY WORK</button></h1>
                 <div class="sub-menu center-flex">
                     <h1 class="menu-button"><a href="ux-ui-design.html">UX UI DESIGN</a></h1>
                     <h1 class="menu-button"><a href="graphic-design.html">GRAPHIC DESIGN</a></h1>
@@ -737,7 +891,6 @@
                         <p>Laundry and cafe shop</p>
                     </div>
                 </a>
-
             </div>
 
             <div id="Tab2" class="tab tab-branding">
@@ -762,66 +915,80 @@
             </div>
 
             <div id="Tab3" class="tab tab-manipulation">
-                <div class="pic-container">
-                    <div class="pic-manipulation">
-                        <img src="pics/manipulation/manipulation-1.png" width="1380" height="776">
-                    </div>
-                    <div class="pic-manipulation pic-before">
-                        <img src="pics/manipulation/manipulation-1-before.png" width="1380" height="776">
-                    </div>
-                </div>
-                <div class="pic-container">
-                    <div class="pic-manipulation">
-                        <img src="pics/manipulation/manipulation-2.png" width="1380" height="776">
-                    </div>
-                    <div class="pic-manipulation pic-before">
-                        <img src="pics/manipulation/manipulation-2-before.png" width="1380" height="776">
+                <div class="pic-container-group">
+                    <div class="pic-container pic-1">
+                        <div class="pic-manipulation">
+                            <img src="pics/manipulation/manipulation-1.png">
+                        </div>
+                        <div class="pic-manipulation pic-before">
+                            <img src="pics/manipulation/manipulation-1-before.png">
+                        </div>
                     </div>
                 </div>
-                <div class="pic-container">
-                    <div class="pic-manipulation">
-                        <img src="pics/manipulation/manipulation-3.png" width="1380" height="776">
+
+                <div class="pic-container-group">
+                    <div class="pic-container pic-2">
+                        <div class="pic-manipulation">
+                            <img src="pics/manipulation/manipulation-2.png">
+                        </div>
+                        <div class="pic-manipulation pic-before">
+                            <img src="pics/manipulation/manipulation-2-before.png">
+                        </div>
                     </div>
-                    <div class="pic-manipulation pic-before">
-                        <img src="pics/manipulation/manipulation-3-before.png" width="1380" height="776">
+                </div>
+
+                <div class="pic-container-group">
+                    <div class="pic-container pic-3">
+                        <div class="pic-manipulation">
+                            <img src="pics/manipulation/manipulation-3.png">
+                        </div>
+                        <div class="pic-manipulation pic-before">
+                            <img src="pics/manipulation/manipulation-3-before.png">
+                        </div>
                     </div>
                 </div>
 
                 <div class="pic-container-group">
                     <div class="pic-container pic-4">
                         <div class="pic-manipulation">
-                            <img src="pics/manipulation/manipulation-4.png" width="549" height="776">
+                            <img src="pics/manipulation/manipulation-4.png">
                         </div>
                         <div class="pic-manipulation pic-before">
-                            <img src="pics/manipulation/manipulation-4-before.png" width="549" height="776">
+                            <img src="pics/manipulation/manipulation-4-before.png">
                         </div>
-                    </div>
-                </div>
-
-                <div class="pic-container">
-                    <div class="pic-manipulation">
-                        <img src="pics/manipulation/manipulation-5.png" width="1380" height="776">
-                    </div>
-                    <div class="pic-manipulation pic-before">
-                        <img src="pics/manipulation/manipulation-5-before.png" width="1380" height="776">
-                    </div>
-                </div>
-                <div class="pic-container">
-                    <div class="pic-manipulation">
-                        <img src="pics/manipulation/manipulation-6.png" width="1380" height="776">
-                    </div>
-                    <div class="pic-manipulation pic-before">
-                        <img src="pics/manipulation/manipulation-6-before.png" width="1380" height="776">
                     </div>
                 </div>
 
                 <div class="pic-container-group">
-                    <div class="pic-container pic-7">
+                    <div class="pic-container pic-5">
                         <div class="pic-manipulation">
-                            <img src="pics/manipulation/manipulation-7.png" width="437" height="776">
+                            <img src="pics/manipulation/manipulation-5.png">
                         </div>
                         <div class="pic-manipulation pic-before">
-                            <img src="pics/manipulation/manipulation-7-before.png" width="437" height="776">
+                            <img src="pics/manipulation/manipulation-5-before.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pic-container-group">
+                    <div class="pic-container pic-6">
+                        <div class="pic-manipulation">
+                            <img src="pics/manipulation/manipulation-6.png">
+                        </div>
+                        <div class="pic-manipulation pic-before">
+                            <img src="pics/manipulation/manipulation-6-before.png">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="pic-container-group">
+                    <div class="pic-container pic-7">
+                        <div class="pic-manipulation">
+                            <img src="pics/manipulation/manipulation-7.png">
+                        </div>
+                        <div class="pic-manipulation pic-before">
+                            <img src="pics/manipulation/manipulation-7-before.png">
                         </div>
                     </div>
                 </div>
