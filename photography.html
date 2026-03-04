@@ -68,14 +68,13 @@
 
         /* photo grid */
         .photo-grid {
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
             gap: 30px;
         }
 
         .photo-grid a {
-            width: 322.5px;
-            height: 322.5px;
+            aspect-ratio: 1 / 1;
             border-radius: 5px;
             overflow: hidden;
         }
@@ -94,7 +93,33 @@
         .photo-grid a img:hover {
             transform: scale(1.1);
         }
+
+        /* desktop: 993px -> 1420px -------------------------------------------------- */
+        @media screen and (max-width: 1420px) {
+            section {
+                padding: 0 40px;
+            }
+        }
+
+        /* tablet: 769px -> 992px  -------------------------------------------------- */
+        @media screen and (max-width: 992px) {
+            .photo-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* mobile: 360px -> 768px -------------------------------------------------- */
+        @media screen and (max-width: 768px) {
+            .photo-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
     </style>
+
+    <link rel="stylesheet" href="root_desktop.css" media="screen and (max-width: 1420px)">
+    <link rel="stylesheet" href="root_tablet.css" media="screen and (max-width: 992px)">
+    <link rel="stylesheet" href="root_mobile.css" media="screen and (max-width: 768px)">
+
 </head>
 
 <body>
