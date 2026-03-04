@@ -40,6 +40,7 @@
             width: 1380px;
             height: 920px;
             margin: 0 auto;
+            padding: 0;
             background-image: url(pics/hoian/_MG_0983.jpg);
             background-size: cover;
             background-position: center;
@@ -144,16 +145,33 @@
 
         /* tablet: 769px -> 992px  -------------------------------------------------- */
         @media screen and (max-width: 992px) {
-            .inside {
-                padding: 40px 0;
-            }
             section {
                 width: 100%;
+            }
+            section h1 {
+                padding: 20px;
             }
         }
 
         /* mobile: 360px -> 768px -------------------------------------------------- */
         @media screen and (max-width: 768px) {
+            .inside {
+                flex-direction: column;
+                padding: 20px;
+            }
+            .right-part {
+                gap: 60px;
+                padding: 32px;
+            }
+            .box h2 {
+                font-size: var(--fontSizeH1small);
+            }
+            .icon-text {
+                gap: 10px;
+            }
+            .right-part .box {
+                padding: 0;
+            }
         }
     </style>
 
@@ -169,7 +187,7 @@
             <a href="index.html"><img src="pics/me.jpg" alt="" class="avatar"></a>
             <h1 class="menu-button center-flex"><a href="about-me.html">ABOUT ME</a></h1>
             <div class="swap-menu">
-                <h1 class="menu-button main-link"><a href="">MY WORK</a></h1>
+                <h1 class="menu-button main-link"><button>MY WORK</button></h1>
                 <div class="sub-menu center-flex">
                     <h1 class="menu-button"><a href="ux-ui-design.html">UX UI DESIGN</a></h1>
                     <h1 class="menu-button"><a href="graphic-design.html">GRAPHIC DESIGN</a></h1>
