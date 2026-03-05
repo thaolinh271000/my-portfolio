@@ -170,10 +170,11 @@
         }
 
         .row-2 .box-left {
-            position: relative;
-            padding: 120px 80px 120px 0;
-            display: flex;
-            align-items: end;
+            padding: 0;
+        }
+
+        .row-2 .box {
+            width: calc(50% - 20px)
         }
 
         .line-group .line {
@@ -183,6 +184,13 @@
         .line-group.vertical {
             display: flex;
             flex-direction: column;
+        }
+
+        .logo-info-group {
+            position: relative;
+            padding: 120px 80px 120px 0;
+            display: flex;
+            justify-content: end;
         }
 
         .logo-info {
@@ -269,23 +277,159 @@
         /* row 4 mockup -------------------------------------------------- */
         .row-4 {
             display: grid;
-            grid-template-columns: repeat(2, 670px);
+            grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(2, 1fr);
-            height: 940px;
+            aspect-ratio: 3 / 2;
             gap: 40px;
         }
 
-        .row-4 .box, .row-5{
+        .row-4 .box,
+        .row-5 {
             padding: 0;
             overflow: hidden;
             height: 100%;
         }
 
-        .row-4 img, .row-5 img {
+        .row-4 img,
+        .row-5 img {
             height: 100%;
             object-fit: cover;
         }
+
+        /* desktop: 993px -> 1420px -------------------------------------------------- */
+        @media screen and (max-width: 1420px) {
+            section {
+                padding: 0 40px;
+            }
+
+            .row-2 .box-left img {
+                width: 300px;
+            }
+
+            .logo-info-group {
+                width: 300px;
+                padding: 0;
+            }
+
+            .logo-info-group p {
+                font-size: 14px;
+            }
+
+            .row-2 .box-left {
+                padding: 100px 60px 100px 0;
+                display: flex;
+                align-items: end;
+            }
+
+            .logo-info.info-1 {
+                left: -160px;
+                text-align: end;
+                height: 100%;
+            }
+
+            .logo-info.info-1 .line-group {
+                height: 100%;
+            }
+
+            .logo-info.info-1 .line-group .line:nth-child(2) {
+                height: 100% !important;
+            }
+
+            .logo-info.info-2 {
+                left: 0;
+                top: -70px;
+                width: 109px;
+            }
+
+            .logo-info.info-2 .line-group {
+                width: 100%;
+            }
+
+            .logo-info.info-2 .line-group .line:nth-child(2) {
+                width: 100% !important;
+            }
+
+            .logo-info.info-3 {
+                left: 165px;
+                top: -20px;
+                width: 135px;
+            }
+
+            .logo-info.info-3 .line-group {
+                width: 100%;
+            }
+
+            .logo-info.info-3 .line-group .line:nth-child(2) {
+                width: 100% !important;
+            }
+
+            .logo-info.info-4 {
+                left: 10px;
+                top: 240px;
+                width: 88px;
+            }
+
+            .logo-info.info-4 .line-group {
+                width: 100%;
+            }
+
+            .logo-info.info-4 .line-group .line:nth-child(2) {
+                width: 100% !important;
+            }
+
+            .logo-info.info-5 {
+                left: 122px;
+                top: 200px;
+                width: 178px;
+            }
+
+            .logo-info.info-5 .line-group {
+                width: 100%;
+            }
+
+            .logo-info.info-5 .line-group .line:nth-child(2) {
+                width: 100% !important;
+            }
+
+            .row-3 img {
+                height: 240px;
+            }
+        }
+
+
+
+        /* tablet: 769px -> 992px  -------------------------------------------------- */
+        @media screen and (max-width: 992px) {
+            .row-2 {
+                flex-direction: column;
+            }
+
+            .row-2 .box {
+                width: 100%;
+            }
+
+            .row-2 .color-group p {
+                padding: 10px;
+            }
+
+            .row-3 img {
+                height: 160px;
+            }
+        }
+
+        /* mobile: 360px -> 768px -------------------------------------------------- */
+        @media screen and (max-width: 768px) {
+            .row-3 img {
+                height: 80px;
+            }
+
+        }
     </style>
+
+    <link rel="stylesheet" href="root_desktop.css" media="screen and (max-width: 1420px)">
+    <link rel="stylesheet" href="root_tablet.css" media="screen and (max-width: 992px)">
+    <link rel="stylesheet" href="root_mobile.css" media="screen and (max-width: 768px)">
+
 </head>
 
 <body>
@@ -316,49 +460,52 @@
 
         <div class="row-2">
             <div class="box box-left">
-                <div class="logo-info info-1">
-                    <p>Japanese<br>wind chime<br>‘furin’ symbol</p>
-                    <div class="line-group vertical">
-                        <div class="line" style="width: 20px; height: 0.5px;"></div>
-                        <div class="line" style="width: 0.5px; height: 292px;"></div>
-                        <div class="line" style="width: 20px; height: 0.5px;"></div>
+                <div class="logo-info-group">
+                    <div class="logo-info info-1">
+                        <p>Japanese<br>wind chime<br>‘furin’ symbol</p>
+                        <div class="line-group vertical">
+                            <div class="line" style="width: 20px; height: 0.5px;"></div>
+                            <div class="line" style="width: 0.5px; height: 292px;"></div>
+                            <div class="line" style="width: 20px; height: 0.5px;"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="logo-info info-2">
-                    <p>Japanese circle of the sun</p>
-                    <div class="line-group horizontal">
-                        <div class="line" style="width: 0.5px; height: 20px;"></div>
-                        <div class="line" style="width: 145px; height: 0.5px;"></div>
-                        <div class="line" style="width: 0.5px; height: 20px;"></div>
+                    <div class="logo-info info-2">
+                        <p>Japanese circle of the sun</p>
+                        <div class="line-group horizontal">
+                            <div class="line" style="width: 0.5px; height: 20px;"></div>
+                            <div class="line" style="width: 145px; height: 0.5px;"></div>
+                            <div class="line" style="width: 0.5px; height: 20px;"></div>
+                        </div>
                     </div>
-                </div>
-                <div class="logo-info info-3">
-                    <p>Business industry</p>
-                    <div class="line-group horizontal">
-                        <div class="line" style="width: 0.5px; height: 20px;"></div>
-                        <div class="line" style="width: 179px; height: 0.5px;"></div>
-                        <div class="line" style="width: 0.5px; height: 20px;"></div>
+                    <div class="logo-info info-3">
+                        <p>Business industry</p>
+                        <div class="line-group horizontal">
+                            <div class="line" style="width: 0.5px; height: 20px;"></div>
+                            <div class="line" style="width: 179px; height: 0.5px;"></div>
+                            <div class="line" style="width: 0.5px; height: 20px;"></div>
+                        </div>
+                    </div>
+
+                    <img src="pics/logo/furin_logo_primary.svg" alt="">
+
+                    <div class="logo-info info-4">
+                        <div class="line-group horizontal">
+                            <div class="line" style="width: 0.5px; height: 20px;"></div>
+                            <div class="line" style="width: 131px; height: 0.5px;"></div>
+                            <div class="line" style="width: 0.5px; height: 20px;"></div>
+                        </div>
+                        <p>‘F’ letter</p>
+                    </div>
+                    <div class="logo-info info-5">
+                        <div class="line-group horizontal">
+                            <div class="line" style="width: 0.5px; height: 20px;"></div>
+                            <div class="line" style="width: 238px; height: 0.5px;"></div>
+                            <div class="line" style="width: 0.5px; height: 20px;"></div>
+                        </div>
+                        <p>Brand name</p>
                     </div>
                 </div>
 
-                <img src="pics/logo/furin_logo_primary.svg" alt="">
-
-                <div class="logo-info info-4">
-                    <div class="line-group horizontal">
-                        <div class="line" style="width: 0.5px; height: 20px;"></div>
-                        <div class="line" style="width: 131px; height: 0.5px;"></div>
-                        <div class="line" style="width: 0.5px; height: 20px;"></div>
-                    </div>
-                    <p>‘F’ letter</p>
-                </div>
-                <div class="logo-info info-5">
-                    <div class="line-group horizontal">
-                        <div class="line" style="width: 0.5px; height: 20px;"></div>
-                        <div class="line" style="width: 238px; height: 0.5px;"></div>
-                        <div class="line" style="width: 0.5px; height: 20px;"></div>
-                    </div>
-                    <p>Brand name</p>
-                </div>
             </div>
             <div class="box box-right">
                 <div class="font-group">
