@@ -24,6 +24,7 @@
 
 html {
     font-size: 100%;
+    width: 100vw;
 }
 
 :root {
@@ -39,6 +40,7 @@ html {
     --font1: 'Montserrat', sans-serif;
     --fontSizeBody: 16px;
     --fontSizeH1: 32px;
+    --fontSizeH1small: 24px;
     --fontSize20: 20px;
     --fontSize3: 24px;
     --fontSize4: 36px;
@@ -80,6 +82,7 @@ img {
 }
 
 body {
+    width: 100%;
     margin: 0;
     padding: 0;
     background-color: var(--subColor1);
@@ -91,6 +94,7 @@ body {
 
 button {
     border: none;
+    background-color: transparent;
 }
 
 /* header -------------------------------------------------- */
@@ -114,10 +118,12 @@ nav h1 {
     align-items: center;
 }
 
-nav a {
+nav a, nav button {
     font-size: var(--fontSize20);
     font-weight: 700;
     text-decoration: none;
+    color: var(--mainColor2);
+    white-space: nowrap;
 
     position: relative;
 }
@@ -144,6 +150,9 @@ nav h1 a::after {
 
 .sub-menu {
     display: none;
+    gap: 80px;
+
+    background-color: white;
 }
 
 .swap-menu:hover .main-link {
@@ -153,7 +162,6 @@ nav h1 a::after {
 
 .swap-menu:hover .sub-menu {
     display: flex;
-    gap: 80px;
 }
 
 .swap-menu a::after {
@@ -187,7 +195,7 @@ nav h1 a::after {
     font-size: var(--fontSizeH1);
 }
 
-.line {
+.heading .line {
     width: 1px;
     align-self: stretch;
     background-color: var(--mainColor2);
