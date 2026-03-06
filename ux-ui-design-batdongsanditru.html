@@ -59,7 +59,30 @@
             align-self: stretch;
             background-color: var(--mainColor2);
         }
+
+        .heading .title h1.short {
+            display: none;
+        }
+
+        /* desktop: 993px -> 1420px -------------------------------------------------- */
+        @media screen and (max-width: 1420px) {
+            section {
+                padding: 0 40px;
+            }
+        }
+
+        /* tablet: 769px -> 992px  -------------------------------------------------- */
+        @media screen and (max-width: 992px) {}
+
+        /* mobile: 360px -> 768px -------------------------------------------------- */
+        @media screen and (max-width: 768px) {
+        }
     </style>
+
+    <link rel="stylesheet" href="root_desktop.css" media="screen and (max-width: 1420px)">
+    <link rel="stylesheet" href="root_tablet.css" media="screen and (max-width: 992px)">
+    <link rel="stylesheet" href="root_mobile.css" media="screen and (max-width: 768px)">
+
 </head>
 
 <body>
