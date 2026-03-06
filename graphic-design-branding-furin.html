@@ -285,7 +285,7 @@
 
         .row-4 .box,
         .row-5 {
-            padding: 0;
+            padding: 0 !important;
             overflow: hidden;
             height: 100%;
         }
@@ -400,6 +400,12 @@
 
         /* tablet: 769px -> 992px  -------------------------------------------------- */
         @media screen and (max-width: 992px) {
+
+            section {
+                padding: 0 20px;
+                gap: 20px;
+            }
+
             .row-2 {
                 flex-direction: column;
             }
@@ -419,8 +425,13 @@
 
         /* mobile: 360px -> 768px -------------------------------------------------- */
         @media screen and (max-width: 768px) {
+            
             .row-3 img {
                 height: 80px;
+            }
+
+            .row-4 {
+                gap: 20px;
             }
 
         }
