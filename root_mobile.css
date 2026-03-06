@@ -30,3 +30,21 @@ body {
     bottom: 24px;
     right: 24px;
 }
+
+/* UI UX detail -------------------------------------------------- */
+section {
+    padding: 0 20px;
+}
+
+.heading {
+    flex-direction: column;
+    gap: 20px;
+}
+
+.heading .title h1 {
+    font-size: var(--fontSizeH1small);
+}
+
+.tab-content .device.mobile {
+    gap: 20px;
+}
