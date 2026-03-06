@@ -41,7 +41,27 @@
             flex-direction: column;
             gap: 40px;
         }
+
+        /* desktop: 993px -> 1420px -------------------------------------------------- */
+        @media screen and (max-width: 1420px) {
+            section {
+                padding: 0 40px;
+            }
+        }
+
+        /* tablet: 769px -> 992px  -------------------------------------------------- */
+        @media screen and (max-width: 992px) {
+        }
+
+        /* mobile: 360px -> 768px -------------------------------------------------- */
+        @media screen and (max-width: 768px) {
+        }
     </style>
+
+    <link rel="stylesheet" href="root_desktop.css" media="screen and (max-width: 1420px)">
+    <link rel="stylesheet" href="root_tablet.css" media="screen and (max-width: 992px)">
+    <link rel="stylesheet" href="root_mobile.css" media="screen and (max-width: 768px)">
+
 </head>
 
 <body>
@@ -64,7 +84,7 @@
     <section>
         <div class="heading">
             <div class="title">
-                <h1>A2Z Civil Engineers</h1>
+                <h1>Valor Ha Giang</h1>
                 <div class="line"></div>
                 <div class="tab-nav">
                     <button class="active" onclick="openDevice('Mobile')">Mobile</button>
