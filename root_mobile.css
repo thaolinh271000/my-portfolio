@@ -48,3 +48,11 @@ section {
 .tab-content .device.mobile {
     gap: 20px;
 }
+
+.tab-content .device.desktop img {
+    width: 320px;
+}
+
+.tab-content .device {
+    gap: 20px;
+}
