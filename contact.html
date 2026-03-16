@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="root.css">
     <style>
         body {
+            height: 100vh;
             margin-bottom: 0;
         }
 
@@ -37,8 +38,9 @@
 
         /* banner */
         section {
-            width: 1380px;
-            height: 920px;
+            max-width: 1380px;
+            width: 100%;
+            height: 100%;
             margin: 0 auto;
             padding: 0;
             background-image: url(pics/hoian/_MG_0983.jpg);
@@ -70,7 +72,7 @@
             flex-direction: column;
         }
 
-        section h1 {
+        .inside h1 {
             width: 100%;
             height: 100%;
             color: white;
@@ -90,8 +92,8 @@
 
         .icon-box svg {
             fill: white;
-            width: 32px;
-            height: 32px;
+            width: 24px;
+            height: 24px;
         }
 
         .box {
@@ -128,18 +130,10 @@
 
         /* desktop: 993px -> 1420px -------------------------------------------------- */
         @media screen and (max-width: 1420px) {
-            body {
-                gap: 0;
-                height: 100vh;
-                margin-bottom: 0;
-            }
             section {
-                width: 100%;
-                border-radius: 0;
-                padding: 0;
-            }
-            .inside {
-                border-radius: 0;
+                width: calc(100% - 80px) !important;
+                height: 100vh;
+                padding: 0 !important;
             }
         }
 
@@ -148,6 +142,7 @@
             section {
                 width: 100%;
             }
+
             section h1 {
                 padding: 20px;
             }
@@ -155,20 +150,43 @@
 
         /* mobile: 360px -> 768px -------------------------------------------------- */
         @media screen and (max-width: 768px) {
+            body {
+                gap: 0 !important;
+            }
+
+            section {
+                width: 100% !important;
+                border-radius: 0;
+                padding: 0 !important;
+            }
+
             .inside {
                 flex-direction: column;
                 padding: 20px;
+                border-radius: 0;
             }
+
+            .inside h1 {
+                height: auto;
+                justify-self: center;
+                display: flex;
+                justify-content: center;
+            }
+
             .right-part {
-                gap: 60px;
-                padding: 32px;
+                height: auto;
+                gap: 30px;
+                padding: 20px;
             }
+
             .box h2 {
                 font-size: var(--fontSizeH1small);
             }
+
             .icon-text {
                 gap: 10px;
             }
+
             .right-part .box {
                 padding: 0;
             }
@@ -220,9 +238,9 @@
                     <div class="icon-text center-flex">
                         <div class="icon-box center-flex">
                             <svg xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 512 512"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                                viewBox="0 0 512 512"><!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
                                 <path
-                                    d="M48 64c-26.5 0-48 21.5-48 48 0 15.1 7.1 29.3 19.2 38.4l208 156c17.1 12.8 40.5 12.8 57.6 0l208-156c12.1-9.1 19.2-23.3 19.2-38.4 0-26.5-21.5-48-48-48L48 64zM0 196L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-188-198.4 148.8c-34.1 25.6-81.1 25.6-115.2 0L0 196z" />
+                                    d="M160.2 25C152.3 6.1 131.7-3.9 112.1 1.4l-5.5 1.5c-64.6 17.6-119.8 80.2-103.7 156.4 37.1 175 174.8 312.7 349.8 349.8 76.3 16.2 138.8-39.1 156.4-103.7l1.5-5.5c5.4-19.7-4.7-40.3-23.5-48.1l-97.3-40.5c-16.5-6.9-35.6-2.1-47 11.8l-38.6 47.2C233.9 335.4 177.3 277 144.8 205.3L189 169.3c13.9-11.3 18.6-30.4 11.8-47L160.2 25z" />
                             </svg>
                         </div>
                         <p>(+84) 93 135 1020</p>
