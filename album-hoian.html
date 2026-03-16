@@ -117,7 +117,57 @@
             color: var(--mainColor2);
             font-size: 32px;
         }
+
+        /* desktop: 993px -> 1420px -------------------------------------------------- */
+        @media screen and (max-width: 1420px) {
+            .mySwiperBig {
+                height: auto;
+                aspect-ratio: 3 / 2;
+            }
+
+            .mySwiperSmall {
+                height: auto;
+            }
+
+            .mySwiperSmall .swiper-slide {
+                width: auto;
+                aspect-ratio: 1 / 1;
+            }
+        }
+
+        /* tablet: 769px -> 992px  -------------------------------------------------- */
+        @media screen and (max-width: 992px) {}
+
+        /* mobile: 360px -> 768px -------------------------------------------------- */
+        @media screen and (max-width: 768px) {
+            section {
+                gap: 20px;
+            }
+
+            .photo-area {
+                gap: 20px;
+            }
+
+            .arrow {
+                width: 40px;
+                height: 40px;
+            }
+
+            .swiper-button-next::after,
+            .swiper-button-prev::after {
+                font-size: 20px;
+            }
+
+            .title h1 {
+                font-size: var(--fontSizeH1small);
+            }
+        }
     </style>
+
+    <link rel="stylesheet" href="root_desktop.css" media="screen and (max-width: 1420px)">
+    <link rel="stylesheet" href="root_tablet.css" media="screen and (max-width: 992px)">
+    <link rel="stylesheet" href="root_mobile.css" media="screen and (max-width: 768px)">
+
 </head>
 
 <body>
