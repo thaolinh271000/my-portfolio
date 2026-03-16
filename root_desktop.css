@@ -2,7 +2,7 @@
 /* header -------------------------------------------------- */
 
 nav {
-    gap: 40px;
+    gap: 60px;
 }
 
 nav a, nav button {
@@ -21,6 +21,7 @@ nav a, nav button {
 
 section {
     width: 100vw;
+    padding: 0 40px;
 }
 
 /* box -------------------------------------------------- */
