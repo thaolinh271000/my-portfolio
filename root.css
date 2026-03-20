@@ -118,7 +118,8 @@ nav h1 {
     align-items: center;
 }
 
-nav a, nav button {
+nav a,
+nav button {
     font-size: var(--fontSize20);
     font-weight: 700;
     text-decoration: none;
@@ -215,7 +216,7 @@ nav h1 a::after {
     cursor: pointer;
 }
 
-.tab-nav button:hover {
+.tab-nav button:hover:not(.active) {
     font-weight: var(--fontBold);
 }
 
@@ -250,7 +251,7 @@ nav h1 a::after {
 
 /* button live web -------------------------------------------------- */
 .heading .liveweb {
-    background-color: var(--mainColor1);
+    background-color: var(--mainColor2);
     gap: 5px;
     padding: 10px;
     border-radius: 5px;
@@ -258,7 +259,8 @@ nav h1 a::after {
     transition: background-color 0.1s cubic-bezier(.2, .8, .2, 1);
 }
 
-.heading .liveweb svg {
+.heading .liveweb svg,
+.heading .prototype svg {
     width: 24px;
     height: 24px;
 }
@@ -274,7 +276,7 @@ nav h1 a::after {
 }
 
 .heading .liveweb:hover {
-    background-color: var(--subColor6);
+    background-color: #888;
 }
 
 .heading .right-part {
@@ -282,6 +284,38 @@ nav h1 a::after {
     flex-direction: row;
     align-items: center;
     gap: 20px;
+}
+
+.heading .prototype {
+    gap: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--mainColor2);
+    cursor: pointer;
+    transition: background-color 0.1s cubic-bezier(.2, .8, .2, 1);
+}
+
+.heading .prototype svg {
+    fill: var(--mainColor2);
+}
+
+.heading .prototype p {
+    color: var(--mainColor2);
+}
+
+.heading .prototype:hover {
+    background-color: #888;
+    border: 1px solid #888;
+}
+
+.heading .prototype:hover p, .heading .prototype:hover svg {
+    color: white;
+    fill: white;
+}
+
+.heading .liveweb p:nth-of-type(2),
+.heading .prototype p:nth-of-type(2) {
+    display: none;
 }
 
 /* scroll to top -------------------------------------------------- */
