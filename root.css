@@ -313,8 +313,11 @@ nav h1 a::after {
     fill: white;
 }
 
-.heading .liveweb p:nth-of-type(2),
-.heading .prototype p:nth-of-type(2) {
+.heading .liveweb p:nth-of-type(2) {
+    display: none;
+}
+
+.heading .right-part a:nth-of-type(3) {
     display: none;
 }
 
