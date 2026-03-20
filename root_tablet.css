@@ -54,3 +54,9 @@ nav button {
     bottom: 40px;
     right: 40px;
 }
+
+/* UI UX detail -------------------------------------------------- */
+.heading {
+    flex-direction: column;
+    gap: 30px;
+}
