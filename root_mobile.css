@@ -58,13 +58,17 @@ section {
 }
 
 /* button live web -------------------------------------------------- */
+.heading .liveweb p:nth-of-type(1) {
+    display: none;
+}
 
-.heading .liveweb p:nth-of-type(2),
-.heading .prototype p:nth-of-type(2) {
+.heading .liveweb p:nth-of-type(2) {
     display: flex;
 }
 
-.heading .liveweb p:nth-of-type(1),
-.heading .prototype p:nth-of-type(1) {
+.heading .right-part a:nth-of-type(2) {
     display: none;
+}
+.heading .right-part a:nth-of-type(3) {
+    display: flex;
 }
